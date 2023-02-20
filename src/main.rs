@@ -5,12 +5,12 @@ mod circuit;
 
 fn main() {
     let circuit = Circuit {
-        a: F::from_canonical_u64(2),
-        b: F::from_canonical_u64(2),        
-        output: F::from_canonical_u64(2 * 2 + 2 * 2)
+        x: F::from_canonical_u64(3),
+        output: F::from_canonical_u64(35)
     };
 
-    let (a, b, output, circuit_instance) = circuit.make_circuit().unwrap();
+    let (x,  output, circuit_instance) = circuit.make_circuit().unwrap();
 
-    circuit.create_prove(a, b, output, circuit_instance).unwrap()
+
+    circuit.create_and_verify_proof(x, output, circuit_instance).unwrap()
 }
