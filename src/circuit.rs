@@ -1,8 +1,8 @@
 use plonky2::{
-    field::{goldilocks_field::GoldilocksField, field_types::Field},
+    field::{goldilocks_field::GoldilocksField, types::Field},
     iop::{
         target::Target,
-        witness::{PartialWitness, Witness},
+        witness::{PartialWitness, WitnessWrite},
     },
     plonk::{
         circuit_builder::CircuitBuilder,
@@ -10,6 +10,7 @@ use plonky2::{
         config::PoseidonGoldilocksConfig,
     },
 };
+
 
 pub type F = GoldilocksField;
 pub type C = PoseidonGoldilocksConfig;

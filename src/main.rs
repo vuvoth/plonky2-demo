@@ -1,5 +1,5 @@
 use circuit::{F, Circuit};
-use plonky2::field::field_types::Field;
+use plonky2::field::{types::Field};
 
 mod circuit;
 
