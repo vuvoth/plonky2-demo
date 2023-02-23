@@ -42,7 +42,7 @@ impl Circuit {
         let x_cube = builder.mul(x_square, x);
         // target sum_0 = x^3 + x 
         let sum_0 = builder.add(x_cube, x);
-        // target output = sum_0 + 5 = x^3 + x ^ 5  
+        // target output = sum_0 + 5 = x^3 + x + 5  
         let output = builder.add_const(sum_0, F::from_canonical_u64(5));
         
         // we set output is public
